@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="description" content="Get free daily inspirational quotes to uplift your mindset and fuel your day. Subscribe for free and receive positive messages every morning.">
-<meta name="keywords" content="daily quotes, inspirational, motivational, free quote newsletter, positivity, mindset">
+  <meta name="description" content="Subscribe to receive daily motivational quotes directly in your inbox. Stay inspired and positive every morning.">
+<meta name="keywords" content="daily quotes, inspirational quotes, motivational emails, subscribe quotes, email newsletter">
 <meta name="robots" content="index, follow">
+<link rel="canonical" href="https://inspirational-quotes4.netlify.app/">
 <title>Daily Positivity | Free Inspirational Quotes</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -171,34 +172,37 @@
 
   <h2>Sign Up for Daily Inspiration</h2>
   <p style="text-align: center; color: #ccc;">Enter your name and email below to get one uplifting quote delivered every morning.</p>
-  <form id="signupForm">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email Address" required />
-    <button type="submit" class="btn">Subscribe Now</button>
-  </form>
+  <form id="subscribe-form" action="http://localhost:5678/webhook/newsletter" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <button type="submit">Subscribe Now</button>
+</form>
+<p id="confirmation-message" style="display: none; color: green;">Thanks for subscribing!</p>
   <div class="message" id="message"></div>
 </section>
 
 <script>
-  const form = document.getElementById('signupForm');
-  const msg = document.getElementById('message');
-
-  form.addEventListener('submit', e => {
+  document.getElementById('subscribe-form').addEventListener('submit', async function (e) {
     e.preventDefault();
-    msg.textContent = '';
-    const formData = new FormData(form);
 
-    fetch('/', {
+    const form = e.target;
+    const data = {
+      name: form.name.value,
+      email: form.email.value
+    };
+
+    const response = await fetch('http://localhost:5678/webhook/newsletter', {
       method: 'POST',
-      body: formData
-    })
-      .then(() => {
-        msg.textContent = 'Thank you! Check your inbox for your first quote tomorrow morning.';
-        form.reset();
-      })
-      .catch(() => {
-        msg.textContent = 'Oops! Something went wrong. Please try again.';
-      });
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+
+    if (response.ok) {
+      form.reset();
+      document.getElementById('confirmation-message').style.display = 'block';
+    } else {
+      alert('Something went wrong. Please try again.');
+    }
   });
 </script>
 
