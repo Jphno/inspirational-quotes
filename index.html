@@ -1,210 +1,864 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="description" content="Subscribe to receive daily motivational quotes directly in your inbox. Stay inspired and positive every morning.">
-<meta name="keywords" content="daily quotes, inspirational quotes, motivational emails, subscribe quotes, email newsletter">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://inspirational-quotes4.netlify.app/">
-<title>Daily Positivity | Free Inspirational Quotes</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daily Inspiration - Free Uplifting Quotes Newsletter</title>
-  <meta name="description" content="Get a daily inspirational quote delivered to your inbox. Boost your mindset, build habits, and stay positive—all for free." />
-  <meta name="keywords" content="daily quotes, inspirational newsletter, positivity email, free motivation, morning mindset, uplifting messages" />
-  <meta property="og:title" content="Daily Inspiration Newsletter" />
-  <meta property="og:description" content="Get daily uplifting quotes delivered by email. Stay motivated every day!" />
-  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Daily+Inspiration+Quotes" />
-  <meta name="theme-color" content="#1e90ff" />
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      color: #fff;
-      background: #0d0d0d;
-      line-height: 1.6;
-    }
-.hero-image {
-  width: 100%;
-  height: auto;
-  max-height: 500px;
-  object-fit: cover;
-  display: block;
-  margin-bottom: 20px;
-  border-radius: 8px;
-}
-
-    header {
-      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 2rem;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      color: #fff;
-      text-shadow: 2px 2px 10px #000;
-    }
-
-    header p {
-      font-size: 1.25rem;
-      color: #eee;
-      max-width: 600px;
-      margin-top: 1rem;
-      text-shadow: 1px 1px 6px #000;
-    }
-
-    section {
-      padding: 4rem 1.5rem;
-      max-width: 960px;
-      margin: 0 auto;
-    }
-
-    .quotes {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-      margin-bottom: 3rem;
-    }
-
-    .quote {
-      background: #1a1a1a;
-      border-left: 4px solid #1e90ff;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-    }
-
-    .quote p {
-      font-size: 1.1rem;
-      color: #ddd;
-      margin-bottom: 0.5rem;
-    }
-
-    .quote small {
-      color: #aaa;
-      font-style: italic;
-    }
-
-    h2 {
-      color: #f0c054;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-
-    form {
-      display: grid;
-      gap: 1rem;
-      margin-top: 2rem;
-      text-align: center;
-    }
-
-    input[type="text"], input[type="email"] {
-      padding: 0.75rem;
-      border: 2px solid #333;
-      border-radius: 6px;
-      font-size: 1rem;
-      width: 100%;
-      background: #222;
-      color: #eee;
-    }
-
-    .btn {
-      background: #1e90ff;
-      color: #fff;
-      padding: 0.8rem 1.2rem;
-      font-size: 1.1rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.2s ease;
-    }
-
-    .btn:hover {
-      background: #3aa0ff;
-    }
-
-    .message {
-      margin-top: 1rem;
-      font-size: 1rem;
-      color: #f0c054;
-    }
-
-    @media (max-width: 768px) {
-      .quotes { grid-template-columns: 1fr; }
-      header h1 { font-size: 2.5rem; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisdom Daily - Get Inspired Every Morning</title>
+    <meta name="description" content="Join our premium quote-based newsletter for daily motivation and clarity. Bite-sized wisdom with big meaning, delivered to your inbox every morning.">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="quotes, inspiration, newsletter, motivation, wisdom, daily quotes">
+    <meta name="author" content="Wisdom Daily">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wisdomdaily.com/">
+    <meta property="og:title" content="Wisdom Daily - Get Inspired Every Morning">
+    <meta property="og:description" content="Join our premium quote-based newsletter for daily motivation and clarity. Bite-sized wisdom with big meaning.">
+    <meta property="og:image" content="https://wisdomdaily.com/og-image.jpg">
+    
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://wisdomdaily.com/">
+    <meta property="twitter:title" content="Wisdom Daily - Get Inspired Every Morning">
+    <meta property="twitter:description" content="Join our premium quote-based newsletter for daily motivation and clarity. Bite-sized wisdom with big meaning.">
+    <meta property="twitter:image" content="https://wisdomdaily.com/twitter-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><text y='20' font-size='20'>📖</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-black: #0a0a0a;
+            --soft-black: #1a1a1a;
+            --charcoal: #2a2a2a;
+            --off-white: #fafafa;
+            --pure-white: #ffffff;
+            --gold: #d4af37;
+            --gold-light: #f4e7a1;
+            --gray-light: #e5e5e5;
+            --gray-medium: #888888;
+            --gray-dark: #333333;
+            --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.1);
+            --shadow-strong: 0 8px 40px rgba(0, 0, 0, 0.15);
+            --gradient-gold: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            --gradient-dark: linear-gradient(135deg, var(--primary-black) 0%, var(--soft-black) 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--gray-dark);
+            background: var(--off-white);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(250, 250, 250, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .navbar.scrolled {
+            background: rgba(250, 250, 250, 0.98);
+            box-shadow: var(--shadow-subtle);
+        }
+        
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-black);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .logo::before {
+            content: "📖";
+            font-size: 1.2rem;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: var(--gray-dark);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: color 0.3s ease;
+            padding: 0.5rem 0;
+        }
+        
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--gold);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-gold);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        .hamburger {
+            width: 24px;
+            height: 2px;
+            background: var(--primary-black);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .hamburger::before,
+        .hamburger::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 2px;
+            background: var(--primary-black);
+            transition: all 0.3s ease;
+        }
+        
+        .hamburger::before {
+            top: -8px;
+        }
+        
+        .hamburger::after {
+            bottom: -8px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: var(--gradient-dark);
+            color: var(--off-white);
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: var(--gradient-gold);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+            margin-bottom: 2.5rem;
+            color: var(--gray-light);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 300;
+        }
+        
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2.5rem;
+            background: var(--gradient-gold);
+            color: var(--primary-black);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--shadow-subtle);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-strong);
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+        
+        .scroll-arrow {
+            width: 24px;
+            height: 24px;
+            stroke: var(--gold);
+            fill: none;
+            stroke-width: 2;
+        }
+        
+        /* Section Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Section Styling */
+        .section {
+            padding: 6rem 0;
+            position: relative;
+        }
+        
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-black);
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            text-align: center;
+            color: var(--gray-medium);
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* About Section */
+        .about {
+            background: var(--pure-white);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--gray-dark);
+        }
+        
+        .about-image {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-strong);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        
+        /* Subscribe Section */
+        .subscribe {
+            background: var(--gradient-dark);
+            color: var(--off-white);
+        }
+        
+        .subscribe-form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--off-white);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .form-input::placeholder {
+            color: rgba(229, 229, 229, 0.7);
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: var(--gold);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 1rem 2rem;
+            background: var(--gradient-gold);
+            color: var(--primary-black);
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: var(--shadow-subtle);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-strong);
+        }
+        
+        .submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .form-message {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .form-message.success {
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            color: #22c55e;
+        }
+        
+        .form-message.error {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #ef4444;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: var(--off-white);
+        }
+        
+        .contact-content {
+            text-align: center;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gray-medium);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            color: var(--gold);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--primary-black);
+            color: var(--gray-light);
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        .footer p {
+            font-size: 0.9rem;
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-gold);
+            color: var(--primary-black);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            visibility: hidden;
+            box-shadow: var(--shadow-subtle);
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-strong);
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(250, 250, 250, 0.98);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1rem;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+            }
+            
+            .nav-menu.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .nav-container {
+                padding: 1rem;
+            }
+            
+            .section {
+                padding: 4rem 0;
+            }
+        }
+        
+        /* High-end visual enhancements */
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .gold-glow {
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+        
+        /* Quote of the day */
+        .quote-display {
+            text-align: center;
+            padding: 2rem;
+            margin: 2rem 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            border-left: 4px solid var(--gold);
+        }
+        
+        .quote-text {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--gray-light);
+            margin-bottom: 1rem;
+        }
+        
+        .quote-author {
+            color: var(--gold);
+            font-weight: 500;
+        }
+    </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Wisdom Daily</a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#subscribe" class="nav-link">Subscribe</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle mobile menu">
+                <div class="hamburger"></div>
+            </button>
+        </div>
+    </nav>
 
-<header>
-  <div>
-    <h1><img src="inspirational.jpg" class="hero-image">Start Your Day Inspired</h1>
-    <p>Join thousands receiving a powerful quote in their inbox every morning—free, uplifting, and unforgettable.</p>
-  </div>
-</header>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Get Inspired Daily</h1>
+                <p>Join our quote-based newsletter to get motivation and clarity every morning. Transform your mindset with wisdom that matters.</p>
+                <a href="#subscribe" class="cta-button">
+                    Start Your Journey
+                    <svg class="scroll-arrow" viewBox="0 0 24 24">
+                        <path d="M7 13l3 3 7-7"></path>
+                    </svg>
+                </a>
+                
+                <!-- Quote of the Day -->
+                <div class="quote-display" id="quote-display">
+                    <p class="quote-text" id="quote-text">"The only way to do great work is to love what you do."</p>
+                    <p class="quote-author" id="quote-author">— Steve Jobs</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <svg class="scroll-arrow" viewBox="0 0 24 24">
+                <path d="M7 13l3 3 7-7"></path>
+            </svg>
+        </div>
+    </section>
 
-<section>
-  <h2>heheSample Quotes You’ll Love</h2>
-  <div class="quotes">
-    <div class="quote">
-      <p>"The only way to do great work is to love what you do."</p>
-      <small>– Steve Jobs</small>
-    </div>
-    <div class="quote">
-      <p>"You are never too old to set another goal or to dream a new dream."</p>
-      <small>– C.S. Lewis</small>
-    </div>
-    <div class="quote">
-      <p>"Happiness is not something ready made. It comes from your own actions."</p>
-      <small>– Dalai Lama</small>
-    </div>
-    <div class="quote">
-      <p>"Believe you can and you're halfway there."</p>
-      <small>– Theodore Roosevelt</small>
-    </div>
-  </div>
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="fade-in">
+                <h2 class="section-title">About Wisdom Daily</h2>
+                <p class="section-subtitle">We deliver bite-sized quotes with big meaning. No fluff, no spam.</p>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Every morning, we curate the most powerful quotes from history's greatest minds and today's leading thinkers. Our newsletter is designed for busy professionals, creatives, and students who want daily inspiration without the overwhelm.</p>
+                        
+                        <p>Each quote comes with context, practical applications, and reflection questions to help you integrate wisdom into your daily life. It's not just about reading quotes—it's about living them.</p>
+                        
+                        <p>Join thousands of subscribers who start their day with intention, clarity, and motivation. Your future self will thank you.</p>
+                    </div>
+                    
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Person reading inspirational content" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <h2>Sign Up for Daily Inspiration</h2>
-  <p style="text-align: center; color: #ccc;">Enter your name and email below to get one uplifting quote delivered every morning.</p>
-  <form id="subscribe-form" action="http://localhost:5678/webhook/newsletter" method="POST">
-  <input type="text" name="name" placeholder="Your Name" required>
-  <input type="email" name="email" placeholder="Your Email" required>
-  <button type="submit">Subscribe Now</button>
-</form>
-<p id="confirmation-message" style="display: none; color: green;">Thanks for subscribing!</p>
-  <div class="message" id="message"></div>
-</section>
+    <!-- Subscribe Section -->
+    <section id="subscribe" class="section subscribe">
+        <div class="container">
+            <div class="fade-in">
+                <h2 class="section-title">Subscribe to Wisdom</h2>
+                <p class="section-subtitle">Get daily inspiration delivered to your inbox. Free forever.</p>
+                
+                <form class="subscribe-form" id="subscribe-form">
+                    <div class="form-group">
+                        <input type="text" class="form-input" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-input" name="email" placeholder="your@email.com" required>
+                    </div>
+                    <button type="submit" class="submit-btn" id="submit-btn">
+                        Subscribe to Wisdom
+                    </button>
+                    <div class="form-message" id="form-message"></div>
+                </form>
+            </div>
+        </div>
+    </section>
 
-<script>
-  document.getElementById('subscribe-form').addEventListener('submit', async function (e) {
-    e.preventDefault();
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="fade-in">
+                <h2 class="section-title">Get in Touch</h2>
+                <div class="contact-content">
+                    <p>Have questions about Wisdom Daily? Want to suggest a quote? We'd love to hear from you.</p>
+                    
+                    <div class="contact-info">
+                        <a href="mailto:hello@wisdomdaily.com" class="contact-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                            hello@wisdomdaily.com
+                        </a>
+                        <a href="https://twitter.com/wisdomdaily" class="contact-item">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                            </svg>
+                            @wisdomdaily
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    const form = e.target;
-    const data = {
-      name: form.name.value,
-      email: form.email.value
-    };
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Wisdom Daily. All rights reserved. Made with ❤️ for curious minds.</p>
+        </div>
+    </footer>
 
-    const response = await fetch('http://localhost:5678/webhook/newsletter', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
-    });
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M7 14l5-5 5 5z"/>
+        </svg>
+    </button>
 
-    if (response.ok) {
-      form.reset();
-      document.getElementById('confirmation-message').style.display = 'block';
-    } else {
-      alert('Something went wrong. Please try again.');
-    }
-  });
-</script>
-
-</body>
-</html>
+    <script>
+        // Navigation functionality
+        const navbar = document.getElementById('navbar');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+        const backToTopBtn = document.getElementById('back-to-top');
+        
+        // Mobile menu toggle
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+        
+        // Smooth scrolling and active link highlighting
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            
+            // Navbar background on scroll
+            if (scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            
+            // Back to top button
+            if (scrollY > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+            
+            // Active section highlighting
+            const sections = document.querySelectorAll('section');
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                
+                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Back to top functionality
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Quote of the day functionality
+        const quotes = [
+            {
+                text: "The only way to do great work is to love what you do.",
+                author: "Steve Jobs"
+            },
+            {
+                text: "Life is what happens to you while you're busy making other plans.",
+                author: "John Lennon"
+            },
+            {
+                text: "The future belongs to those who believe in the beauty of their dreams.",
+                author: "Eleanor Roosevelt"
+            },
+            {
+                text: "It is during our darkest moments that we must focus to see the light.",
+                author: "Aristotle"
+            },
+            {
+                text: "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+                author: "Winston Churchill"
+            }
+        ];
+        
+        function displayRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const quote = quotes[randomIndex];
+            
+            document.getElementById('quote-text').textContent = `"${quote.text}"`;
+            document.getElementById('quote-author').textContent = `— ${quote.author}`;
+        }
+        
+        // Display a random quote on page load
+        displayRandomQuote();
+        
+        // Change quote every 10 seconds
+        setInterval(displayRandomQuote, 10000);
+        
+        // Form submission functionality
+        const subscribeForm = document.getElementById('subscribe-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const formMessage = document.getElementById('form-message');
+        
+        subscribeForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData =
